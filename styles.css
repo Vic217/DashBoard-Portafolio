@@ -2,28 +2,29 @@
     padding: 0;
     margin: 0;
 }
+  
+body {
+    background: linear-gradient(90deg, hsla(148, 89%, 78%, 1) 0%, hsla(210, 81%, 22%, 1) 100%);
+}
 
 main {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: grid;
-    grid-template-areas: "aside header header header header"
-    "aside article article article article"
-    "aside article article article article"
-    "aside article article article article"
-    "aside article article article article"
-    "aside article article article article"
-    "footer footer footer footer footer";
+    grid-template-areas: "aside header header header"
+    "aside article article article"
+    "aside article article article"
+    "aside article article article"
+    "aside article article article"
+    "aside article article article"
+    "footer footer footer footer";
 }
 
 /*Sidebar*/
 #contenedor-sidebar {
+    color: #000;
     grid-area: aside;
-}
-
-#contenedor-sidebar {
     display: grid;
-    grid-template-columns: minmax(150px, 200px);
+    grid-template-columns: minmax(150px, 230px);
 }
 
 #contenedor-sidebar > div {
@@ -39,11 +40,21 @@ main {
     gap: 13px;
 }
 
-#contenedor-sidebar > nav > a {
+.a-sidebar {
+    color: #000;
     padding-left: 30px;
     display: grid;
     grid-template-columns: .3fr 1fr;
     align-items: center;
+}
+
+.a-sidebar > img {
+    padding-right: 20px;
+}
+
+#contenedor-ayuda {
+    padding-top: 25px;
+    padding-bottom: 30px;
 }
 
 #contenedor-sidebar > div > h2 {
@@ -66,11 +77,12 @@ main {
 }
 
 #contenedor-cabecera > nav {
+    color: #FFF;
     display: grid;
     grid-template-columns: .5fr 1fr;
     align-content: space-between;
     align-items: center;
-    justify-items: center;
+    justify-items: start;
 }
 
 form {
@@ -89,12 +101,64 @@ form {
 /*Contenido*/
 #contenedor-contenido {
     grid-area: article;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
 }
 
+#proyectos {
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 1fr 9fr;
+    justify-items: center;
+    justify-content: center;
+}
+
+#contenedor-art {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+}
+
+/*Sidebar-contenido*/
+#mas {
+    color: #FFF;
+    padding: 15px 5px 15px 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 222px));
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+#anuncios > h2, 
+#aprendizaje > h2 {
+    color: #FFF;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.learn {
+    color: #FFF;
+}
+
+/*Footer*/
 #contenedor-footer {
+    padding-bottom: 15px;
+    font-size: 25px;
     grid-area: footer;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
 }
 
-aside {
-    background-color: color-mix(in hsl, #727c86 65%, #1c8099 15%);
+#contenedor-footer > a {
+    color: #FFF;
+    padding-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
