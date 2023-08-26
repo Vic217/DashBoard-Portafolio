@@ -21,6 +21,7 @@ main {
 
 /*Sidebar*/
 #contenedor-sidebar {
+    box-shadow: 14px 14px 64px -6px rgba(36,2,2,1);
     color: #000;
     grid-area: aside;
     display: grid;
@@ -123,6 +124,7 @@ form {
 
 /*Sidebar-contenido*/
 #mas {
+    box-shadow: -14px -14px 64px -6px rgba(36,2,2,1);
     color: #FFF;
     padding: 15px 5px 15px 5px;
     display: grid;
