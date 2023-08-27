@@ -7,5 +7,5 @@ Cumplí todos los objetivos de la tarea.
 * Librería de Iconos SVG: https://materialdesignicons.com/ y https://devicon.dev/
 * Dino SVG: Creado en Inkscape
 
-# Imagenes
+## Imagenes
 * Selfie tomada por mi.
