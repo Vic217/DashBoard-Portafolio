@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
         contenido_side.push(valor_ultimo_hijo);
     });
 
-    /*Cambia el tamaño del slidebar al cargar página con ventana menor a 1100 */
+    /*Cambia el tamaño del slidebar al cargar página con ventana menor a 1150 */
     if (window.innerWidth < 1150) {
         [...a_slid].forEach(element => {
             let ultimoHijo = element.childNodes[1];
@@ -49,7 +49,7 @@ window.addEventListener("load", () => {
 
 /*Cambiar el tamaño de la ventana */
 window.addEventListener("resize", () => {
-    /*Al cambiar el tamaño menor a 1100 modifica el sidebar*/
+    /*Al cambiar el tamaño menor a 1150 modifica el sidebar*/
     if (window.innerWidth < 1150) {
         [...a_slid].forEach(element => {
             let ultimoHijo = element.childNodes[1];
