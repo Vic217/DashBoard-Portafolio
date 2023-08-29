@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="icon" href="img-logos/dino.svg" type="image/svg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <main>    
+    <main>
         <header id="contenedor-cabecera">
             <article id="contenedor-presentación">
-                <h1> Bienvenidos a mi portafolio!!! <br>Mi nombre es Victor García </h1>
+                <h1>Mi nombre es Victor García </h1>
                 <p>Ingeniero en Mecatrónica <br>Desarrollador FullStack</p>
-                <a href="https://github.com/Vic217" alt="Perfil de Github"><img src="img-logos/github-mark.png" alt="Logo de Github" width="35px"></a>
+                <a href="https://github.com/Vic217" alt="Perfil de Github"><img class="logo_git"
+                        src="img-logos/github-mark.png" alt="Logo de Github" width="35px"></a>
             </article>
             <nav>
                 <form action="" method="">
                     <img src="img-logos/buscar.svg" alt="Buscador" width="35px">
-                    <input type="search" id="search" name="search" autocomplete="off">
+                    <input type="search" id="search" name="search" placeholder="  Buscar" autocomplete="off">
                 </form>
 
-                <div id="contenedor-noti">
+                <div id="notificacion-foto">
                     <img src="img-logos/bell-ring.svg" alt="Notificación" width="35px">
 
                     <img src="img-logos/índice.jpeg" alt="Foto del creador de la página" width="40px">
                     <p>Victor García</p>
+                </div>
+
+                <div>
+                    <button class="boton" type="submit">Nuevo</button>
+                    <button class="boton" type="submit">Cargar</button>
+                    <button class="boton" type="submit">Compartir</button>
                 </div>
             </nav>
         </header>
@@ -34,43 +46,85 @@
             <div id="proyectos">
                 <h2>Proyectos</h2>
                 <div id="contenedor-art">
-                    <article>
-                <h3>Calculadora</h3>
+                    <article id="calculadora">
+                        <h3>Calculadora</h3>
+                        <p>En este proyecto se creo una calculadora interactiva por medio de HTML, CSS y JavaScript. 
+                            <br>Esta calculadora es manejada por medio de el teclado y el puntor.
+                            <br>Se realizo la funcionalidad con JavaScript y se diseño con HTML Y CSS.
+                        </p>
                     </article>
-                    <article> 
-                <h3>Piedra Papel o Tijeras</h3> 
+                    <article id="juego-piedra">
+                        <h3>Piedra Papel o Tijeras</h3>
+                        <p>En este proyecto se realizo la funcionalidad de un juego de piedra, papel o tijeras 
+                            <br>donde el usuario compite contra la máquina y el primero en ganar 5 juegos
+                            <br>es el ganador de la partida.
+                        </p>
                     </article>
-                    <article> 
-                <h3>Tic Tac Toe </h3>
+                    <article id="tic-tac">
+                        <h3>Tic Tac Toe </h3>
+                        <p>Este es el famoso juego del gato que todos conocemos, el cual consiste en
+                            <br> que cada jugador haga una fila de 3 para ganar.
+                        </p>
                     </article>
-                    <article>
-                <h3>Etch a Sketch</h3>
+                    <article id="etch">
+                        <h3>Etch a Sketch</h3>
+                        <p>En este proyecto se creo una pizarra por medio de JavaScript
+                            <br>es totalmente interactiva y puedes dibujar lo que gustes en ella
+                            <br>tiene una función en la que puedes dibujar con colores aleatorios.
+                        </p>
                     </article>
-                    <article>
-                <h3>Formulario Falso</h3>
+                    <article id="formulario">
+                        <h3>Formulario Falso</h3>
+                        <p>Este es un formulario en el cual se practico como mostrar problemas
+                            <br>en el llenado por parte del usuario.
+                            <br>Mayormente se buscaba comprender de que manera funcionan los formularios
+                            <br>en los sitios web.
+                        </p>
                     </article>
-                    <article>
-                <h3>Landin Page</h3>
+                    <article id="landing">
+                        <h3>Landing Page</h3>
+                        <p>Este fue uno de los primeros proyectos en el cual se trabajo realizando
+                            <br>una pagina simple con la cual nos comenzamos a familiarizar con 
+                            <br>las distintas etiquetas que tiene HTML.
+                        </p>
                     </article>
-                    <article>
-                <h3>Tec-Mat</h3>
+                    <article id="tec-mat">
+                        <h3>Tec-Mat</h3>
+                        <p>Este en una pagina en desarrollo la cual será una herramienta
+                            <br>muy útil para niños con TDHA, se espera poder ponerla en
+                            <br>producción y que pueda ayudar a todos esos niños con problemas
+                            <br>de aprendizaje.
+                        </p>
                     </article>
                 </div>
             </div>
             <aside id="mas">
                 <div id="anuncios">
-                    <h2><img src="img-logos/newspaper-variant-multiple-outline.svg" alt="Noticias" width="35px">Noticias</h2>
+                    <h2><img src="img-logos/newspaper-variant-multiple-outline.svg" alt="Noticias" width="35px">Noticias
+                    </h2>
                     <article>
                         <h4>GRID VS FLEXBOX</h4>
+                        <p class="anuncio">Lorem Ipsum is simply dummy text of the 
+                            <br>printing and typesetting industry. 
+                            <br>Lorem Ipsum has been the industry's 
+                            <br>standard dummy text ever since the 1500s.
+                            <br>All the Lorem Ipsum generators on the Internet
+                            <br>tend to repeat predefined chunks as necessary, 
+                            <br>making this the first true generator on the Internet. 
+                            <br>It uses a dictionary of over 200 Latin words, 
+                            <br>combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        </p>
                     </article>
                 </div>
                 <div id="aprendizaje">
                     <h2><img src="img-logos/school.svg" alt="Virrete" width="35px">Para aprender</h2>
                     <article>
-                        <a class="learn" href="#">CSS</a>
-                        <a class="learn" href="#">HTML</a>
-                        <a class="learn" href="#">JavaScript</a>
-                        <a class="learn" href="#">Python</a>
+                        <ul>
+                            <li><a class="learn" href="#"><img src="img-logos/language-css3.svg" alt="Logo de CSS" width="35px"> CSS</a></li>
+                            <li><a class="learn" href="#"><img src="img-logos/language-html5.svg" alt="Logo HTML5" width="35px"> HTML5</a></li>
+                            <li><a class="learn" href="#"><img src="img-logos/language-javascript.svg" alt="Logo JavaScript" width="35px"> JavaScript</a></li>
+                            <li><a class="learn" href="#"><img src="img-logos/language-python.svg" alt="Logo Python" width="35px"> Python</a></li>
+                        </ul>
                     </article>
                 </div>
             </aside>
@@ -81,23 +135,35 @@
                 <h2 id="dash">Dashboard</h2>
             </div>
             <nav>
-                <a class="a-sidebar" href="#"><img class="mostrar" id="0" src="img-logos/home.svg" alt="Logo de Home" width="35px">Inicio</a>
-                <a class="a-sidebar" href="#"><img class="mostrar" id="1" src="img-logos/perfil.svg" alt="Logo de Perfil" width="35px">Perfil</a>              
-                <a class="a-sidebar" href="#"><img class="mostrar" id="2" src="img-logos/mensaje.svg" alt="Logo de Mensaje" width="35px">Mensajes</a>             
-                <a class="a-sidebar" href="#"><img class="mostrar" id="3" src="img-logos/history.svg" alt="Logo de Historial" width="35px">Historial</a>               
-                <a class="a-sidebar" href="#"><img class="mostrar" id="4" src="img-logos/proyectos.svg" alt="Logo de Proyectos" width="35px">Proyectos</a>                
-                <a class="a-sidebar" href="#"><img class="mostrar" id="5" src="img-logos/comunidad.svg" alt="Logo de Comunidad" width="35px">Comunidad</a>
-                <a class="a-sidebar" href="#"><img class="mostrar" id="6" src="img-logos/school.svg" alt="Logo de Virrete" width="35px">Aprende</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="0" src="img-logos/home.svg" alt="Logo de Home"
+                        width="35px">Inicio</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="1" src="img-logos/perfil.svg"
+                        alt="Logo de Perfil" width="35px">Perfil</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="2" src="img-logos/mensaje.svg"
+                        alt="Logo de Mensaje" width="35px">Mensajes</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="3" src="img-logos/history.svg"
+                        alt="Logo de Historial" width="35px">Historial</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="4" src="img-logos/proyectos.svg"
+                        alt="Logo de Proyectos" width="35px">Proyectos</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="5" src="img-logos/comunidad.svg"
+                        alt="Logo de Comunidad" width="35px">Comunidad</a>
+                <a class="a-sidebar" href="#"><img class="mostrar" id="6" src="img-logos/school.svg"
+                        alt="Logo de Virrete" width="35px">Aprende</a>
                 <div id="contenedor-ayuda">
-                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="7" src="img-logos/soporte.svg" alt="Logo de Soporte" width="35px">Soporte</a> 
-                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="8" src="img-logos/herramientas.svg" alt="Logo de Herramientas" width="35px">Herramientas</a>
-                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="9" src="img-logos/information.svg" alt="Logo de Información" width="35px">Privacidad</a> 
+                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="7" src="img-logos/soporte.svg"
+                            alt="Logo de Soporte" width="35px">Soporte</a>
+                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="8" src="img-logos/herramientas.svg"
+                            alt="Logo de Herramientas" width="35px">Herramientas</a>
+                    <a class="a-sidebar ayuda" href="#"><img class="mostrar" id="9" src="img-logos/information.svg"
+                            alt="Logo de Información" width="35px">Privacidad</a>
                 </div>
             </nav>
         </aside>
         <footer id="contenedor-footer">
             <p> Copyright © 2023 </p>
-            <a href="https://github.com/Vic217?tab=repositories" alt="Repositorios de github">Vic217 <img id="git-foot" src="img-logos/github-mark.png" alt="Logo de Github" width="30px"></a>
+            <a href="https://github.com/Vic217?tab=repositories" alt="Repositorios de github">Vic217 <img
+                    class="logo_git" src="img-logos/github-mark.png" alt="Logo de Github" width="30px"></a>
         </footer>
     </main>
+
 </html>
