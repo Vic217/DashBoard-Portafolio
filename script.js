@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     });
 
     /*Cambia el tamaño del slidebar al cargar página con ventana menor a 1100 */
-    if (window.innerWidth < 1100) {
+    if (window.innerWidth < 1150) {
         [...a_slid].forEach(element => {
             let ultimoHijo = element.childNodes[1];
             if (ultimoHijo.textContent !== "") {
@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 
             element.addEventListener("mouseout", (e) => {
                 const posicion = Number(e.target.getAttribute("id"));
-                if (window.innerWidth < 1100) {
+                if (window.innerWidth < 1150) {
                     a_slid[posicion].childNodes[1].textContent = "";
                 }
             });
@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
 /*Cambiar el tamaño de la ventana */
 window.addEventListener("resize", () => {
     /*Al cambiar el tamaño menor a 1100 modifica el sidebar*/
-    if (window.innerWidth < 1100) {
+    if (window.innerWidth < 1150) {
         [...a_slid].forEach(element => {
             let ultimoHijo = element.childNodes[1];
             if (ultimoHijo.textContent !== "") {
@@ -74,14 +74,14 @@ window.addEventListener("resize", () => {
 
             element.addEventListener("mouseout", (e) => {
                 const posicion = Number(e.target.getAttribute("id"));
-                if (window.innerWidth < 1100) {
+                if (window.innerWidth < 1150) {
                     a_slid[posicion].childNodes[1].textContent = "";
                 }
             });
         });
 
     /*Aumenta tamaño y se ajustan a tamaño normal */
-    } else if (window.innerWidth > 1100) {
+    } else if (window.innerWidth > 1150) {
         let conteo = 0;
         [...a_slid].forEach(element => {
             if (element.childNodes[1].textContent === "") {
