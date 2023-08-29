@@ -1,10 +1,11 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
   
 body {
-    background: linear-gradient(90deg, hsla(148, 89%, 78%, 1) 0%, hsla(210, 81%, 22%, 1) 100%);
+    background: linear-gradient(90deg, hsla(148, 89%, 78%, 1) 0%, hsl(210, 81%, 22%) 100%);
 }
 
 main {
@@ -14,14 +15,14 @@ main {
     "aside article article article"
     "aside article article article"
     "aside article article article"
-    "aside article article article"
-    "aside article article article"
+    ". article article article"
+    ". article article article"
     "footer footer footer footer";
 }
 
 /*Sidebar*/
 #contenedor-sidebar {
-    box-shadow: 14px 14px 64px -6px rgba(36,2,2,1);
+    box-shadow: 10px 10px 34px -6px rgba(36,2,2,1);
     color: #000;
     grid-area: aside;
     display: grid;
@@ -87,28 +88,58 @@ main {
     justify-items: center;
 }
 
+#contenedor-presentación > p {
+    font-size: 26px;
+    align-self: end;
+}
+
 #contenedor-cabecera > nav {
     color: #FFF;
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-content: space-between;
     align-items: center;
-    justify-items: start;
+    justify-items: center;
+    gap: 15px;
 }
 
 form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .2fr 3fr;
     justify-items: end;
 }
 
-#contenedor-noti {
+#notificacion-foto {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-items: center;
     align-items: center;
-    justify-items: end;
 }
 
+.boton {
+    background-color: #FFF;
+    border-color: #FFF;
+    border-bottom: #FFF;
+    border-style: groove;
+    font-weight: 900;
+    font-size: 12px;
+    margin: 5px;
+    width: 75px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #1c3eac11;
+    color: #FFF;
+}
+
+.boton:active {
+    background-color: #162f8156;
+    color: #FFF;
+    border-style: ridge;
+}
 /*Contenido*/
 #contenedor-contenido {
     box-shadow:  0px -24px 49px -32px rgba(36,2,2,1);
@@ -125,14 +156,242 @@ form {
     grid-template-rows: 1fr 9fr;
     justify-items: center;
     justify-content: center;
+    align-items: start;
+}
+
+#proyectos > h2 {
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: 20px;
 }
 
 #contenedor-art {
     width: 100%;
     display: grid;
-    grid-gap: 20px;
+    gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-items: center;
+}
+
+#contenedor-art > article {
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+}
+
+#calculadora > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#calculadora {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#calculadora::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Calculadora.png);
+    background-size: 50% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#calculadora:hover::before {
+    width: 4px;
+}
+
+#juego-piedra > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#juego-piedra {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#juego-piedra::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Piedra-papel-tijeras.png);
+    background-size: 100% 50%;
+    transition: 0.5s ease-in-out;
+}
+
+#juego-piedra:hover::before {
+    width: 4px;
+}
+
+#tic-tac > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#tic-tac {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#tic-tac::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Captura\ desde\ 2023-08-29\ 08-45-19.png);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#tic-tac:hover::before {
+    width: 4px;
+}
+
+#etch > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#etch {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#etch::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Pizarra.png);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#etch:hover::before {
+    width: 4px;
+}
+
+#formulario > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#formulario {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#formulario::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Formulario.png);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#formulario:hover::before {
+    width: 4px;
+}
+
+#landing > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#landing {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Resetario.png);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#landing:hover::before {
+    width: 4px;
+}
+
+#tec-mat > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#tec-mat {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#tec-mat::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Tec-Mat.png);
+    background-size: 100% 50%;
+    transition: 0.5s ease-in-out;
+}
+
+#tec-mat:hover::before {
+    width: 4px;
 }
 
 /*Sidebar-contenido*/
@@ -144,8 +403,9 @@ form {
     padding: 15px 5px 15px 5px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 228px));
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .5fr .5fr;
     justify-items: center;
+    gap: 20px;
 }
 
 #anuncios > h2, 
@@ -154,16 +414,39 @@ form {
     display: grid;
     grid-template-columns: .2fr 1fr;
     align-items: center;
-    justify-items: center;
+    justify-items: start;
+    gap: 8px;
+}
+
+.anuncio {
+ padding-left: 15px;
+ margin-top: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+ul {
+    margin-top: 15px;
+    list-style-type: none;
+    display: grid;
+    align-content: center;
 }
 
 .learn {
     color: #FFF;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: .5fr .5fr 1fr;
+    align-items: center;
 }
 
 /*Footer*/
 #contenedor-footer {
     padding-bottom: 15px;
+    padding-top: 30px;
     font-size: 25px;
     grid-area: footer;
     justify-self: center;
@@ -180,14 +463,19 @@ form {
     align-items: center;
 }
 
-#git-foot {
+.logo_git {
     filter: drop-shadow(4px -2px 2px #F1F1F1);
 }
 
 a {
     text-decoration: none;
+    font-weight: 700;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+p {
+    font-weight: 700;
 }
