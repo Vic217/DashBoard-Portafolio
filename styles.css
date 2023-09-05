@@ -214,6 +214,36 @@ form {
     width: 4px;
 }
 
+#libreria > p {
+    padding-left: 10px;
+    padding-right: 4px;
+}
+
+#libreria {
+    background: #ffffff33;
+    box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -webkit-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    -moz-box-shadow: 9px 1px 25px -10px rgba(36,2,2,1);
+    position: relative;
+    overflow: hidden;
+}
+
+#libreria::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97%;
+    height: 100%;
+    background: url(img-logos/Libreria.png);
+    background-size: 100% 100%;
+    transition: 0.5s ease-in-out;
+}
+
+#libreria:hover::before {
+    width: 4px;
+}
+
 #juego-piedra > p {
     padding-left: 10px;
     padding-right: 4px;
